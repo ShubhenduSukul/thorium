@@ -2,9 +2,9 @@ const { count } = require("console")
 const authorModel = require("../models/authorModel")
 const bookModel= require("../models/bookModel")
 
-const createBook= async function (req, res) {
-    let book = req.body
-    let bookCreated = await bookModel.create(book)
+const bookByAuthor= async function (req, res) {
+    // let bookAuthor = req.body
+    let bookAuthor = await bookModel.find().populate('author_id')
     res.send({data: bookCreated})
 }
 
