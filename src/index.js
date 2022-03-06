@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-mongoose.connect("mongodb+srv://ShubhenduSukul:*****@cluster0.pbil8.mongodb.net/Shubhendu?authSource=admin&replicaSet=atlas-13oko1-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true", {
+mongoose.connect("mongodb+srv://ShubhenduSukul:c6hSz12HCX9o4fiU@cluster0.pbil8.mongodb.net/Shubhendu?authSource=admin&replicaSet=atlas-13oko1-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true", {
     useNewUrlParser: true
 })
 .then( () => console.log("MongoDb is connected"))
@@ -17,6 +17,6 @@ mongoose.connect("mongodb+srv://ShubhenduSukul:*****@cluster0.pbil8.mongodb.net/
 app.use('/', route);
 
 
-app.listen(process.env.PORT || 3000, function () {
-    console.log('Express app running on port ' + (process.env.PORT || 3000))
+app.listen(process.env.PORT || 27017, function () {
+    console.log('Express app running on port ' + (process.env.PORT || 27017))
 });
