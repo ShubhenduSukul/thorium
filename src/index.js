@@ -23,6 +23,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // 2010-08-19 14:00:00 , 123.459.898.734 , /basicAPi
 // 2010-08-19 14:00:00 , 123.459.898.734 , /falanaAPI
 
+const info= function(req,res,next){
+    console.log("HI I am from the Global middleware")
+    next();
+}
 const assi= function(req,res,next){
     var currdate= new Date();
     var Datetime= currdate.getDate() + " "
